@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sjvan\\OneDrive\\Documents\\GitHub\\homework-assignment-Odura\\c# project\\Battery scheduler\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EDCDAB76-46ED-471D-8997-DBDE6734C285}|Battery scheduler\\Battery scheduler.csproj|c:\\users\\sjvan\\onedrive\\documents\\github\\homework-assignment-odura\\c# project\\battery scheduler\\battery scheduler\\solvers\\lpflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDCDAB76-46ED-471D-8997-DBDE6734C285}|Battery scheduler\\Battery scheduler.csproj|solutionrelative:battery scheduler\\solvers\\lpflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDCDAB76-46ED-471D-8997-DBDE6734C285}|Battery scheduler\\Battery scheduler.csproj|c:\\users\\sjvan\\onedrive\\documents\\github\\homework-assignment-odura\\c# project\\battery scheduler\\battery scheduler\\structure\\chargingschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDCDAB76-46ED-471D-8997-DBDE6734C285}|Battery scheduler\\Battery scheduler.csproj|solutionrelative:battery scheduler\\structure\\chargingschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDCDAB76-46ED-471D-8997-DBDE6734C285}|Battery scheduler\\Battery scheduler.csproj|c:\\users\\sjvan\\onedrive\\documents\\github\\homework-assignment-odura\\c# project\\battery scheduler\\battery scheduler\\structure\\energyprices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDCDAB76-46ED-471D-8997-DBDE6734C285}|Battery scheduler\\Battery scheduler.csproj|solutionrelative:battery scheduler\\structure\\energyprices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDCDAB76-46ED-471D-8997-DBDE6734C285}|Battery scheduler\\Battery scheduler.csproj|c:\\users\\sjvan\\onedrive\\documents\\github\\homework-assignment-odura\\c# project\\battery scheduler\\battery scheduler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDCDAB76-46ED-471D-8997-DBDE6734C285}|Battery scheduler\\Battery scheduler.csproj|solutionrelative:battery scheduler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDCDAB76-46ED-471D-8997-DBDE6734C285}|Battery scheduler\\Battery scheduler.csproj|c:\\users\\sjvan\\onedrive\\documents\\github\\homework-assignment-odura\\c# project\\battery scheduler\\battery scheduler\\structure\\battery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDCDAB76-46ED-471D-8997-DBDE6734C285}|Battery scheduler\\Battery scheduler.csproj|solutionrelative:battery scheduler\\structure\\battery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 287,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LPFLOW.cs",
+              "DocumentMoniker": "C:\\Users\\sjvan\\OneDrive\\Documents\\GitHub\\homework-assignment-Odura\\c# project\\Battery scheduler\\Battery scheduler\\solvers\\LPFLOW.cs",
+              "RelativeDocumentMoniker": "Battery scheduler\\solvers\\LPFLOW.cs",
+              "ToolTip": "C:\\Users\\sjvan\\OneDrive\\Documents\\GitHub\\homework-assignment-Odura\\c# project\\Battery scheduler\\Battery scheduler\\solvers\\LPFLOW.cs",
+              "RelativeToolTip": "Battery scheduler\\solvers\\LPFLOW.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwD8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T20:01:49.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChargingSchedule.cs",
+              "DocumentMoniker": "C:\\Users\\sjvan\\OneDrive\\Documents\\GitHub\\homework-assignment-Odura\\c# project\\Battery scheduler\\Battery scheduler\\structure\\ChargingSchedule.cs",
+              "RelativeDocumentMoniker": "Battery scheduler\\structure\\ChargingSchedule.cs",
+              "ToolTip": "C:\\Users\\sjvan\\OneDrive\\Documents\\GitHub\\homework-assignment-Odura\\c# project\\Battery scheduler\\Battery scheduler\\structure\\ChargingSchedule.cs",
+              "RelativeToolTip": "Battery scheduler\\structure\\ChargingSchedule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T18:48:19.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Battery.cs",
+              "DocumentMoniker": "C:\\Users\\sjvan\\OneDrive\\Documents\\GitHub\\homework-assignment-Odura\\c# project\\Battery scheduler\\Battery scheduler\\structure\\Battery.cs",
+              "RelativeDocumentMoniker": "Battery scheduler\\structure\\Battery.cs",
+              "ToolTip": "C:\\Users\\sjvan\\OneDrive\\Documents\\GitHub\\homework-assignment-Odura\\c# project\\Battery scheduler\\Battery scheduler\\structure\\Battery.cs",
+              "RelativeToolTip": "Battery scheduler\\structure\\Battery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T18:41:30.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Energyprices.cs",
+              "DocumentMoniker": "C:\\Users\\sjvan\\OneDrive\\Documents\\GitHub\\homework-assignment-Odura\\c# project\\Battery scheduler\\Battery scheduler\\structure\\Energyprices.cs",
+              "RelativeDocumentMoniker": "Battery scheduler\\structure\\Energyprices.cs",
+              "ToolTip": "C:\\Users\\sjvan\\OneDrive\\Documents\\GitHub\\homework-assignment-Odura\\c# project\\Battery scheduler\\Battery scheduler\\structure\\Energyprices.cs",
+              "RelativeToolTip": "Battery scheduler\\structure\\Energyprices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T18:40:18.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sjvan\\OneDrive\\Documents\\GitHub\\homework-assignment-Odura\\c# project\\Battery scheduler\\Battery scheduler\\Program.cs",
+              "RelativeDocumentMoniker": "Battery scheduler\\Program.cs",
+              "ToolTip": "C:\\Users\\sjvan\\OneDrive\\Documents\\GitHub\\homework-assignment-Odura\\c# project\\Battery scheduler\\Battery scheduler\\Program.cs",
+              "RelativeToolTip": "Battery scheduler\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T18:32:00.221Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
