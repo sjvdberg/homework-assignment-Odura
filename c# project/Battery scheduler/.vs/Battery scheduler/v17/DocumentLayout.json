@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "Battery scheduler\\solvers\\LPFLOW.cs",
               "ToolTip": "C:\\Users\\sjvan\\OneDrive\\Documents\\GitHub\\homework-assignment-Odura\\c# project\\Battery scheduler\\Battery scheduler\\solvers\\LPFLOW.cs",
               "RelativeToolTip": "Battery scheduler\\solvers\\LPFLOW.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwD8AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-07T20:01:49.533Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "Battery scheduler\\structure\\ChargingSchedule.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T18:48:19.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T18:48:19.086Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "Battery scheduler\\structure\\Battery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T18:41:30.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T18:41:30.94Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "Battery scheduler\\structure\\Energyprices.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T18:40:18.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T18:40:18.805Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "Battery scheduler\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T18:32:00.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T18:32:00.221Z"
             }
           ]
         }

@@ -23,7 +23,7 @@ namespace Battery_scheduler.solvers
             currentCharge = new Dictionary<DateTime, Variable>();
             flowconstraint = new Dictionary<DateTime, Constraint>();
 
-            Solver solver = Solver.CreateSolver("SCIP");
+            Solver solver = Solver.CreateSolver("GLOP");
             Objective objective = solver.Objective();
 
             for (int i = 0; i < prices.orderedTimestamps.Count; i++)

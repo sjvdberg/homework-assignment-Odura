@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Battery scheduler")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b84728df722bb8cd71a24b3d504fd8cdac9287d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Battery scheduler")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Battery scheduler")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

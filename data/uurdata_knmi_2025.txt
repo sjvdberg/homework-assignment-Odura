@@ -11,7 +11,7 @@
 # T         : Temperatuur (in 0.1 graden Celsius) op 1.50 m hoogte tijdens de waarneming / Temperature (in 0.1 degrees Celsius) at 1.50 m at the time of observation
 # SQ        : Duur van de zonneschijn (in 0.1 uren) per uurvak; berekend uit globale straling  (-1 for <0.05 uur) / Sunshine duration (in 0.1 hour) during the hourly division; calculated from global radiation (-1 for <0.05 hour)
 # Q         : Globale straling (in J/cm2) per uurvak / Global radiation (in J/cm2) during the hourly division
-# STN,YYYYMMDD,HH,   FH,    T,   SQ,    Q
+STN,YYYYMMDD,     HH,   FH,    T,   SQ,    Q
   260,20250101,    1,   80,   83,    0,    0
   260,20250101,    2,   80,   86,    0,    0
   260,20250101,    3,   90,   86,    0,    0
