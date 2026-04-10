@@ -11,5 +11,13 @@ namespace Battery_scheduler.structure
         public List<DateTime> orderedTimestamps;
         public Dictionary<DateTime, double> prices;
         public double timeperiod = 0.25;
+
+        public Energyprices(double timeperiod, Dictionary<DateTime, double> prices, List<DateTime> orderedTimestamps)
+        {
+            this.orderedTimestamps = orderedTimestamps;
+            this.prices = prices;  
+            this.timeperiod = timeperiod;
+
+        }
     }
 }

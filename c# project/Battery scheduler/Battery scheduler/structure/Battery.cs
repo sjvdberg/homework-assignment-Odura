@@ -13,6 +13,7 @@ namespace Battery_scheduler.structure
         public double minSoC, maxSoC;
         public double roundTripEfficiency;
         public double degradationLoss;
+        public double initialCharge;
 
         public Battery()
         {
@@ -22,6 +23,7 @@ namespace Battery_scheduler.structure
             maxSoC = 0.95;
             roundTripEfficiency = 0.88;
             degradationLoss = 80;
+            initialCharge = minSoC * capacity;
         }
     }
 }

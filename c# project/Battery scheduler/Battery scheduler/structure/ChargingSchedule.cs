@@ -23,11 +23,11 @@ namespace Battery_scheduler.structure
             schedule = new Dictionary<DateTime, double>();
         }
 
-        public bool Checkvalidity(double initialCharge)
+        public bool Checkvalidity()
         {
             profit = 0;
 
-            double currentcharge = initialCharge;
+            double currentcharge = battery.initialCharge;
 
             if (currentcharge > battery.maxSoC || currentcharge < battery.minSoC)
                 // Initial charge not in correct range
@@ -43,10 +43,10 @@ namespace Battery_scheduler.structure
                 else
                     currentcharge += chargeChange;
 
-                if (chargeChange > battery.maxCapacityChange || chargeChange < -battery.maxCapacityChange)
+                if (chargeChange > battery.maxCapacityChange / Math.Sqrt(battery.roundTripEfficiency) || chargeChange < -battery.maxCapacityChange)
                     // Charge change capacity not in correct range
                     return false;
-                if (currentcharge > battery.maxSoC || currentcharge < battery.minSoC)
+                if (currentcharge > battery.maxSoC * battery.capacity + 0.01 || currentcharge < battery.minSoC * battery.capacity - 0.01)
                     // Charge not in correct range
                     return false;
 
@@ -77,12 +77,14 @@ namespace Battery_scheduler.structure
                 }
                 else
                 {
-                    totdegradationloss -= chargeChange * battery.degradationLoss;
+                    //Degradation loss will be negative as chargeChange is negative
+                    double degradationcosts = chargeChange * battery.degradationLoss;
+                    totdegradationloss += degradationcosts;
 
                     double sellvalue = - chargeChange * intervalprice * Math.Sqrt(battery.roundTripEfficiency);
                     totsellvalue += sellvalue;
 
-                    profit += sellvalue;
+                    profit += sellvalue + degradationcosts;
                 }
             }
             return profit;

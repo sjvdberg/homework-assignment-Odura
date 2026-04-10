@@ -3,6 +3,7 @@ import pandas as pd
 from entsoe import EntsoePandasClient
 from config import *
 from datetime import datetime, date, time
+import matplotlib.pyplot as plt
 
 
 
@@ -40,4 +41,22 @@ def clean_weather_data():
     min15_weather_data.to_csv('data/min15_weather_data.csv')
 
 
-clean_weather_data()
+
+def plot_data():
+    prices = pd.read_csv('data/clean_day_ahead_data.csv')
+    prices.plot(x='datetime', y='price')
+    plt.show()
+
+def daily_average():
+    prices = pd.read_csv('data/clean_day_ahead_data.csv', parse_dates=['datetime'])
+    prices = prices.set_index('datetime')
+    prices = prices.tz_convert('Europe/Amsterdam')
+
+    daily_mean = prices.resample('ME').mean()
+
+
+    daily_mean.plot( y='price')
+    plt.show()
+
+
+daily_average()
