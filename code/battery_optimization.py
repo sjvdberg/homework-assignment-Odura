@@ -94,3 +94,4 @@ def optimize_model(year = None, month = None, day = None, file_name = None, data
         df_results.to_csv(f'results/day_schedules/{year}-{month}-{day}.csv')
         print(pyo.value(opt_model.profit))
     return df_results, pyo.value(opt_model.profit)
+
