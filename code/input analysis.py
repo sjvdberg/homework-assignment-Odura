@@ -4,6 +4,7 @@ from entsoe import EntsoePandasClient
 from config import *
 from datetime import datetime, date, time
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 
 
@@ -16,6 +17,7 @@ def import_entsoe_data():
     ts = client.query_day_ahead_prices(country_code, start, end)
     ts.to_csv('data/day_ahead_data.csv')
 
+# Converts the price data to UTC and interpolates missing values
 def clean_entsoe_data():
 
     prices = pd.read_csv('data/day_ahead_data.csv')
@@ -25,6 +27,7 @@ def clean_entsoe_data():
 
     min15_prices.to_csv('data/clean_day_ahead_data.csv')
 
+# Adds timezones to the weather data and respamples them on a month by month basis
 def clean_weather_data():
     hourly_weather_data = pd.read_csv('data/uurdata_knmi_2025.txt', comment='#')
     hourly_weather_data.columns = hourly_weather_data.columns.str.strip()
@@ -41,12 +44,14 @@ def clean_weather_data():
     min15_weather_data.to_csv('data/min15_weather_data.csv')
 
 
-
+# Creates a graph showing the average price for each day
 def plot_data():
     prices = pd.read_csv('data/clean_day_ahead_data.csv')
     prices.plot(x='datetime', y='price')
+    plt.tight_layout()
     plt.show()
 
+#Creates a graph containing the average price for each month
 def daily_average():
     prices = pd.read_csv('data/clean_day_ahead_data.csv', parse_dates=['datetime'])
     prices = prices.set_index('datetime')
@@ -54,12 +59,34 @@ def daily_average():
 
     df = pd.DataFrame()
 
-    df['daily_mean'] = prices.resample('ME').mean()
-    df['dainly_min'] = prices.resample('ME').min()
-    df['daily_max']  = prices.resample('ME').max()
+    df['average'] = prices.resample('ME').mean()
+
+    #df['daily_mean'] = prices.resample('ME').mean()
+    #df['daily_min'] = prices.resample('D').min()
+    #df['daily_max']  = prices.resample('D').max()
+    #df['daily_min'] = df['daily_min'].resample('ME').mean()
+    #df['daily_max']  = df['daily_max'].resample('ME').mean()
 
     df.plot()
+    plt.tight_layout()
     plt.show()
 
+#Creates a correlation matrix between the different variables
+def correlation_matrix():
+    prices = pd.read_csv('data/clean_day_ahead_data.csv', parse_dates=['datetime'])
+    prices = prices.set_index('datetime')
 
-daily_average()
+    weather = pd.read_csv('data/min15_weather_data.csv', parse_dates=['datetime'])
+    weather = weather.set_index('datetime')
+
+    data = prices.join(weather, how='inner')
+
+    corr = data.corr(method='spearman')
+
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(corr, annot=True, fmt='.2f', cmap='coolwarm', center=0)
+    plt.title('Spearman correlation — weather vs price')
+    plt.tight_layout()
+    plt.show()
+
+correlation_matrix()

@@ -10,6 +10,7 @@ from sklearn.linear_model import ElasticNetCV
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 
+# Reads data files and merges them
 def get_data():
     prices = pd.read_csv('data/clean_day_ahead_data.csv', parse_dates=['datetime'])
     weather = pd.read_csv('data/min15_weather_data.csv', parse_dates=['datetime'])
@@ -20,6 +21,7 @@ def get_data():
 
     return data
 
+# Add features for time. The rolling averages and price lags need to be changed if you are predicting more than 1 day ahead.
 def add_time_features(df):
     df['hour']        = df.index.hour
     df['dayofweek']   = df.index.dayofweek
@@ -37,6 +39,7 @@ def add_time_features(df):
 
     return df
 
+# Gets the results for the used metrics
 def get_metrics(y_test, preds, print_metrics=True):
     mae  = mean_absolute_error(y_test, preds)
     msae = mean_squared_error(y_test, preds)
@@ -47,6 +50,7 @@ def get_metrics(y_test, preds, print_metrics=True):
         print(f"MSAE:  {msae:.2f}")
     return mae, msae, rho
 
+# The naive model gained by just shifting back until we get the values from a day ago
 def naive_model(train_start = 0, train_length = 90 * 96, test_length = 3 * 96, print_metrics = True):
     
     data = get_data()
@@ -68,6 +72,7 @@ def naive_model(train_start = 0, train_length = 90 * 96, test_length = 3 * 96, p
 
     return naive_pred, get_metrics(y_test, naive_pred, print_metrics)
 
+# The xgboost model. Returns the predictions and the metrics
 def xgboost_model(train_start = 0, train_length = 90 * 96, test_length = 3 * 96, print_metrics = True):
     data = get_data()
 
@@ -107,11 +112,6 @@ def xgboost_model(train_start = 0, train_length = 90 * 96, test_length = 3 * 96,
     df_preds = pd.DataFrame({'preds' : preds}, index=y_test)
 
 
-    # Plot actual vs predicted
-    #pd.DataFrame({'actual': y_test, 'predicted': naive_pred}).plot(figsize=(14, 4))
-    #plt.title('Actual vs Predicted Energy Prices')
-    #plt.show()
-
     # Plot feature importance
     #importance = pd.Series(model.feature_importances_, index=features)
     #importance.sort_values().plot(kind='barh', figsize=(8, 6))
@@ -119,7 +119,7 @@ def xgboost_model(train_start = 0, train_length = 90 * 96, test_length = 3 * 96,
     #plt.show()
     return df_preds, get_metrics(y_test, preds, print_metrics)
 
-
+# The elastic net model. Returns the predictions and the metrics
 def elastic_net(train_start = 0, train_length = 90 * 96, test_length = 3 * 96, print_metrics = True):
     data = get_data()
 
@@ -154,10 +154,6 @@ def elastic_net(train_start = 0, train_length = 90 * 96, test_length = 3 * 96, p
 
     df_preds = pd.DataFrame({'preds' : preds}, index=y_test)
 
-    # Plot actual vs predicted
-    #pd.DataFrame({'actual': y_test, 'predicted': preds}).plot(figsize=(14, 4))
-    #plt.title('Actual vs Predicted Energy Prices')
-    #plt.show()
     return df_preds, get_metrics(y_test, preds, print_metrics)
 
 # Sarimax model is currently not used as it took too long to run. Likely due to the long season length (96)

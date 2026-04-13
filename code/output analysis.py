@@ -44,7 +44,9 @@ def get_year_prediction(year):
     df_results.to_csv('results/battery_optimization.csv')
 
 
-def compare_year_prediction(year, model):
+#Compares the prediction for the second half of the year to one gained from using predicted data with the specific model.
+#the model parameter here is the function defined in price_prediction.py for each model
+def compare_year_prediction(model):
 
     days = range(0,365-181)
 
@@ -66,7 +68,7 @@ def compare_year_prediction(year, model):
 
     df_combined.to_csv('results/combined_prediction.csv')
 
-
+# Creates a graph that contains the profit for the optimal schedule and the profit from using prediction data
 def create_graph():
     
     day_profits = pd.read_csv('results/combined_prediction.csv', parse_dates=['date'])
@@ -82,7 +84,7 @@ def create_graph():
     plt.show()
 
 
-
+# Used to cdreate various graphs for the report from the raw data
 def create_results_graphs(metric):
     data = pd.read_csv('results/all_results.csv')
 

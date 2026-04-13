@@ -41,7 +41,7 @@ def extract_month_prices(year, month, write_to_file = True):
     
     return month_data
 
-# Function that builds an LP model for the battery optimization
+# Function that builds an LP model for the battery optimization. Needs either year/month/day combo, file name or a dataframe (data) to know price data.
 def optimize_model(year = None, month = None, day = None, file_name = None, data=None, print_results = True):
     # Check whether a specific file was submitted or that we instead take a day/month from the default one
     if year is None or month is None:
