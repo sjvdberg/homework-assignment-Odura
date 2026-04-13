@@ -6,16 +6,24 @@ using System.Threading.Tasks;
 
 namespace Battery_scheduler.structure
 {
+    /// <summary>
+    /// Class that represents a charging schedule for a specific battery.
+    /// prices contains the energy prices for the day
+    /// battery is the battery that this is a schedule for
+    /// 
+    /// schedule is the actual schedule indicating whether we are loading (if positive) or unloading (if negative) at each timestep.
+    /// profit is the expected profit of the schedule
+    /// </summary>
     public class ChargingSchedule
     {
-        public Energyprices prices;
+        public EnergyMarket prices;
         public Battery battery;
 
         public Dictionary<DateTime, double> schedule;
         public double profit;
         
 
-        public ChargingSchedule(Energyprices prices, Battery battery)
+        public ChargingSchedule(EnergyMarket prices, Battery battery)
         {
             this.prices = prices;
             this.battery = battery;
@@ -23,7 +31,11 @@ namespace Battery_scheduler.structure
             schedule = new Dictionary<DateTime, double>();
         }
 
-        public bool Checkvalidity()
+        /// <summary>
+        /// Checks whether the schedule is valid for the battery and does not break any constraints.
+        /// </summary>
+        /// <returns></returns>
+        public bool CheckFeasibility()
         {
             profit = 0;
 
@@ -54,6 +66,10 @@ namespace Battery_scheduler.structure
             return true;
         }
 
+        /// <summary>
+        /// Computes the total profit for the schedule and updates the profit variable accordingly.
+        /// </summary>
+        /// <returns></returns>
         public double GetProfit()
         {
             profit = 0;
@@ -69,6 +85,7 @@ namespace Battery_scheduler.structure
 
                 if (chargeSpeed > 0)
                 {
+                    //Loading means energy is bought, so profit decreases
                     double buyvalue = chargeChange * intervalprice;
                     totbuyvalue += buyvalue;
 
@@ -77,10 +94,13 @@ namespace Battery_scheduler.structure
                 }
                 else
                 {
+                    //Unloading (or doing nothing) means energy is sold, so profit increases unless the degradation cost outweighs the sell value.
+
                     //Degradation loss will be negative as chargeChange is negative
                     double degradationcosts = chargeChange * battery.degradationLoss;
                     totdegradationloss += degradationcosts;
 
+                    //Sellvalue will be positive if and only if interval price is as well as chargeChange is negative.
                     double sellvalue = - chargeChange * intervalprice * Math.Sqrt(battery.roundTripEfficiency);
                     totsellvalue += sellvalue;
 

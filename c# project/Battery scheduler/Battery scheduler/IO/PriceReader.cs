@@ -12,7 +12,7 @@ namespace Battery_scheduler.IO
     static public class PriceReader
     {
 
-        public static Energyprices GetPrices(string file)
+        public static EnergyMarket GetPrices(string file)
         {
             StreamReader sr = new StreamReader(file);
 
@@ -34,7 +34,7 @@ namespace Battery_scheduler.IO
             }
 
             orderedTimestamps.Sort();
-            return new Energyprices(0.25, prices, orderedTimestamps);
+            return new EnergyMarket(0.25, prices, orderedTimestamps);
         }
     }
 }

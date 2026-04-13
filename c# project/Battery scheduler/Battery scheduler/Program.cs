@@ -10,9 +10,9 @@ namespace OduraHomework
     {
         static void Main(string[] args)
         {
-            string file = "../../../../../../data/days/05-2025.csv";
+            string file = "../../../../../../data/day_schedules/05-05-2025.csv";
 
-            Energyprices prices = PriceReader.GetPrices(file);
+            EnergyMarket prices = PriceReader.GetPrices(file);
             Battery battery = new Battery();
 
             LPFLOW flow = new LPFLOW(battery, prices); 

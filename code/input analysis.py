@@ -52,10 +52,13 @@ def daily_average():
     prices = prices.set_index('datetime')
     prices = prices.tz_convert('Europe/Amsterdam')
 
-    daily_mean = prices.resample('ME').mean()
+    df = pd.DataFrame()
 
+    df['daily_mean'] = prices.resample('ME').mean()
+    df['dainly_min'] = prices.resample('ME').min()
+    df['daily_max']  = prices.resample('ME').max()
 
-    daily_mean.plot( y='price')
+    df.plot()
     plt.show()
 
 
